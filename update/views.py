@@ -143,15 +143,15 @@ def search(request):
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
 
-# def search_details(request,business_id):
-#     try :
-#         business = Business.objects.get(id = business_id)
-#
-#     except ObjectDoesNotExist:
-#         raise Http404()
-#
-#     return render(request, 'search_details.html', {'business':business})
-#
+def search_details(request,business_id):
+    try :
+        business = Business.objects.get(id = business_id)
+
+    except ObjectDoesNotExist:
+        raise Http404()
+
+    return render(request, 'search_details.html', {'business':business})
+
 # @login_required(login_url='/accounts/login/')
 # def new_health(request):
 #     current_user = request.user
