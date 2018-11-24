@@ -38,17 +38,17 @@ def index(request):
 #     police = Police.get_all()
 #     return render(request,'homepolice.html',{'police':police,})
 #
-# def profile(request):
-#     current_user = request.user
-#     profile = UserStatus.objects.filter(user=current_user)
-#
-#     if len(profile)<1:
-#         profile = "No profile"
-#     else:
-#         profile = UserStatus.objects.filter(user=current_user)
-#
-#     return render(request, 'profile.html',{'profile':profile})
-#
+def profile(request):
+    current_user = request.user
+    profile = UserStatus.objects.filter(user=current_user)
+
+    if len(profile)<1:
+        profile = "No profile"
+    else:
+        profile = UserStatus.objects.filter(user=current_user)
+
+    return render(request, 'profile.html',{'profile':profile})
+
 # def change_profile(request,user):
 #     current_user = request.user
 #     if request.method == 'POST':
