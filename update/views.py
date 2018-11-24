@@ -1,17 +1,17 @@
-# from django.shortcuts import render,redirect
-# from django.http  import HttpResponse,Http404
-# from .models import Neighborhood,UserStatus,Business,Post,Health,Police
-# from django.contrib.auth.decorators import login_required
-# from .forms import ProfileForm,NeighborhoodForm,PostForm,BusinessForm,HealthForm
-#
-# # Create your views here.
-#
-# @login_required(login_url='/accounts/login/')
-# def index(request):
-#     business = Business.get_all()
-#     neighborhood = Neighborhood.get_all()
-#     post = Post.get_all()
-#     return render(request,'index.html',{'business':business,'neighborhood':neighborhood, 'post':post})
+from django.shortcuts import render,redirect
+from django.http  import HttpResponse,Http404
+from .models import Neighborhood,UserStatus,Business,Post,Health,Police
+from django.contrib.auth.decorators import login_required
+from .forms import ProfileForm,NeighborhoodForm,PostForm,BusinessForm,HealthForm
+
+# Create your views here.
+
+@login_required(login_url='/accounts/login/')
+def index(request):
+    business = Business.get_all()
+    neighborhood = Neighborhood.get_all()
+    post = Post.get_all()
+    return render(request,'index.html',{'business':business,'neighborhood':neighborhood, 'post':post})
 #
 # @login_required(login_url='/accounts/login/')
 # def homepost(request):
