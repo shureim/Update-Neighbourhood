@@ -152,17 +152,17 @@ def search_details(request,business_id):
 
     return render(request, 'search_details.html', {'business':business})
 
-# @login_required(login_url='/accounts/login/')
-# def new_health(request):
-#     current_user = request.user
-#     if request.method == 'POST':
-#         form = HealthForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             health = form.save(commit=False)
-#             health.user = current_user
-#             health.save()
-#         return redirect('indexPage')
-#
-#     else:
-#         form = HealthForm()
-#     return render(request, 'new_health.html', {"form": form})
+@login_required(login_url='/accounts/login/')
+def new_health(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = HealthForm(request.POST, request.FILES)
+        if form.is_valid():
+            health = form.save(commit=False)
+            health.user = current_user
+            health.save()
+        return redirect('indexPage')
+
+    else:
+        form = HealthForm()
+    return render(request, 'new_health.html', {"form": form})
