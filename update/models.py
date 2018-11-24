@@ -25,15 +25,15 @@ class Neighborhood(models.Model):
         self.count = count
         self.save()
 
-#     @classmethod
-#     def get_all(cls):
-#         neighborhood = cls.objects.all()
-#         return neighborhood
-#
-#     @classmethod
-#     def get_neighborhood(cls, neighborhood_id):
-#         neighborhood = cls.objects.get(id=neighborhood_id)
-#         return neighborhood
+    @classmethod
+    def get_all(cls):
+        neighborhood = cls.objects.all()
+        return neighborhood
+
+    @classmethod
+    def get_neighborhood(cls, neighborhood_id):
+        neighborhood = cls.objects.get(id=neighborhood_id)
+        return neighborhood
 #
 # class UserStatus(models.Model):
 #     user_image = models.ImageField(upload_to = 'profile_pic/',null=True)
