@@ -6,16 +6,16 @@ class Neighborhood(models.Model):
     name = models.CharField(max_length = 50)
     location = models.CharField(max_length = 500)
     count = models.PositiveIntegerField()
-#
-#     def __str__(self):
-#         return self.name
-#
-#
-#     def save_neighborhood(self):
-#         self.save()
-#
-#     def delete_neighborhood(self):
-#         self.delete()
+
+    def __str__(self):
+        return self.name
+
+
+    def save_neighborhood(self):
+        self.save()
+
+    def delete_neighborhood(self):
+        self.delete()
 #
 #     def update_neighborhood(self,location):
 #         self.location = location
