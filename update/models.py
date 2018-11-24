@@ -54,14 +54,14 @@ class UserStatus(models.Model):
         self.neighborhood = neighborhood
         self.save()
 
-# class Business(models.Model):
-#     business_image = models.ImageField(upload_to = 'business/', null=True)
-#     business_name = models.CharField(max_length = 50)
-#     user = models.ForeignKey(UserStatus,on_delete=models.CASCADE, null=True)
-#     neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE, null=True)
-#     business_email = models.EmailField()
-#
-#
+class Business(models.Model):
+    business_image = models.ImageField(upload_to = 'business/', null=True)
+    business_name = models.CharField(max_length = 50)
+    user = models.ForeignKey(UserStatus,on_delete=models.CASCADE, null=True)
+    neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE, null=True)
+    business_email = models.EmailField()
+
+
 #     def __str__(self):
 #         return self.business_name
 #
