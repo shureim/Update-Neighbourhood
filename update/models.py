@@ -49,11 +49,11 @@ class UserStatus(models.Model):
 
     def delete_userstatus(self):
         self.delete()
-#
-#     def update_userstatus(self,neighborhood):
-#         self.neighborhood = neighborhood
-#         self.save()
-#
+
+    def update_userstatus(self,neighborhood):
+        self.neighborhood = neighborhood
+        self.save()
+
 # class Business(models.Model):
 #     business_image = models.ImageField(upload_to = 'business/', null=True)
 #     business_name = models.CharField(max_length = 50)
