@@ -40,15 +40,15 @@ class UserStatus(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE,null = True,related_name = 'user')
     neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE, null=True)
     user_email = models.EmailField()
-#
-#     def __str__(self):
-#         return self.user_email
-#
-#     def save_userstatus(self):
-#         self.save()
-#
-#     def delete_userstatus(self):
-#         self.delete()
+
+    def __str__(self):
+        return self.user_email
+
+    def save_userstatus(self):
+        self.save()
+
+    def delete_userstatus(self):
+        self.delete()
 #
 #     def update_userstatus(self,neighborhood):
 #         self.neighborhood = neighborhood
