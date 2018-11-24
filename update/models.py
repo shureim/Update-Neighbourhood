@@ -34,12 +34,12 @@ class Neighborhood(models.Model):
     def get_neighborhood(cls, neighborhood_id):
         neighborhood = cls.objects.get(id=neighborhood_id)
         return neighborhood
-#
-# class UserStatus(models.Model):
-#     user_image = models.ImageField(upload_to = 'profile_pic/',null=True)
-#     user = models.ForeignKey(User,on_delete=models.CASCADE,null = True,related_name = 'user')
-#     neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE, null=True)
-#     user_email = models.EmailField()
+
+class UserStatus(models.Model):
+    user_image = models.ImageField(upload_to = 'profile_pic/',null=True)
+    user = models.ForeignKey(User,on_delete=models.CASCADE,null = True,related_name = 'user')
+    neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE, null=True)
+    user_email = models.EmailField()
 #
 #     def __str__(self):
 #         return self.user_email
