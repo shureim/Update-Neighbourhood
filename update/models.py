@@ -16,15 +16,15 @@ class Neighborhood(models.Model):
 
     def delete_neighborhood(self):
         self.delete()
-#
-#     def update_neighborhood(self,location):
-#         self.location = location
-#         self.save()
-#
-#     def update_neighborhood(self,count):
-#         self.count = count
-#         self.save()
-#
+
+    def update_neighborhood(self,location):
+        self.location = location
+        self.save()
+
+    def update_neighborhood(self,count):
+        self.count = count
+        self.save()
+
 #     @classmethod
 #     def get_all(cls):
 #         neighborhood = cls.objects.all()
