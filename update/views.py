@@ -49,28 +49,28 @@ def profile(request):
 
     return render(request, 'profile.html',{'profile':profile})
 
-# def change_profile(request,user):
-#     current_user = request.user
-#     if request.method == 'POST':
-#         form = ProfileForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             prof = form.save(commit = False)
-#
-#             prof = UserStatus.objects.get(pk=6)
-#
-#             prof.user = current_user
-#             prof.neighborhood = "TRIAL"
-#
-#             prof.save()
-#             print(prof)
-#         return redirect('indexPage')
-#     elif UserStatus.objects.get(user=current_user):
-#         profile = UserStatus.objects.get(user=current_user)
-#         form = ProfileForm(instance=profile)
-#     else:
-#         form = ProfileForm()
-#     return render(request,'change_profile.html',{'form':form})
-#
+def change_profile(request,user):
+    current_user = request.user
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            prof = form.save(commit = False)
+
+            prof = UserStatus.objects.get(pk=6)
+
+            prof.user = current_user
+            prof.neighborhood = "TRIAL"
+
+            prof.save()
+            print(prof)
+        return redirect('indexPage')
+    elif UserStatus.objects.get(user=current_user):
+        profile = UserStatus.objects.get(user=current_user)
+        form = ProfileForm(instance=profile)
+    else:
+        form = ProfileForm()
+    return render(request,'change_profile.html',{'form':form})
+
 # def edit_profile(request):
 #     current_user = request.user
 #     if request.method == 'POST':
