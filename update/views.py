@@ -84,13 +84,13 @@ def edit_profile(request):
         form = ProfileForm()
     return render(request,'edit_profile.html',{'form':form})
 
-# def post(request,post_id):
-#     try:
-#         post = Post.objects.get(id = post_id)
-#     except DoesNotExist:
-#         raise Http404()
-#     return render(request,"post.html", {"post":post})
-#
+def post(request,post_id):
+    try:
+        post = Post.objects.get(id = post_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"post.html", {"post":post})
+
 # @login_required(login_url='/accounts/login/')
 # def new_post(request):
 #     current_user = request.user
