@@ -123,13 +123,13 @@ def new_business(request):
 
 
 
-# def neighborhood(request,neighborhood_id):
-#     try:
-#         neighborhood = Neighborhood.objects.get(id = neighborhood_id)
-#     except DoesNotExist:
-#         raise Http404()
-#     return render(request,"neighborhood.html", {"neighborhood":neighborhood})
-#
+def neighborhood(request,neighborhood_id):
+    try:
+        neighborhood = Neighborhood.objects.get(id = neighborhood_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"neighborhood.html", {"neighborhood":neighborhood})
+
 # def search(request):
 #
 #     if 'business' in request.GET and request.GET["business"]:
