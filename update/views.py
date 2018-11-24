@@ -106,23 +106,23 @@ def new_post(request):
         form = PostForm()
     return render(request, 'new_post.html', {"form": form})
 
-# @login_required(login_url='/accounts/login/')
-# def new_business(request):
-#     current_user = request.user
-#     if request.method == 'POST':
-#         form = BusinessForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             business = form.save(commit=False)
-#             # business.user = current_user
-#             business.save()
-#         return redirect('indexPage')
-#
-#     else:
-#         form = BusinessForm()
-#     return render(request, 'new_business.html', {"form": form})
-#
-#
-#
+@login_required(login_url='/accounts/login/')
+def new_business(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = BusinessForm(request.POST, request.FILES)
+        if form.is_valid():
+            business = form.save(commit=False)
+            # business.user = current_user
+            business.save()
+        return redirect('indexPage')
+
+    else:
+        form = BusinessForm()
+    return render(request, 'new_business.html', {"form": form})
+
+
+
 # def neighborhood(request,neighborhood_id):
 #     try:
 #         neighborhood = Neighborhood.objects.get(id = neighborhood_id)
