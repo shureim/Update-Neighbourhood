@@ -96,12 +96,12 @@ class Post(models.Model):
     description = models.TextField(max_length = 500,null=True)
     writer= models.ForeignKey(User,on_delete=models.CASCADE,null = True)
 
-#     def save_post(self):
-#         self.save()
-#
-#     def delete_post(self):
-#         self.delete()
-#
+    def save_post(self):
+        self.save()
+
+    def delete_post(self):
+        self.delete()
+
 #     @classmethod
 #     def get_all(cls):
 #         post = cls.objects.all()
