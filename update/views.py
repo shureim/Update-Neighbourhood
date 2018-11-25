@@ -33,11 +33,11 @@ def homehealth(request):
     health = Health.get_all()
     return render(request,'homehealth.html',{'health':health,})
 
-# @login_required(login_url='/accounts/login/')
-# def homepolice(request):
-#     police = Police.get_all()
-#     return render(request,'homepolice.html',{'police':police,})
-#
+@login_required(login_url='/accounts/login/')
+def homepolice(request):
+    police = Police.get_all()
+    return render(request,'homepolice.html',{'police':police,})
+
 def profile(request):
     current_user = request.user
     profile = UserStatus.objects.filter(user=current_user)
