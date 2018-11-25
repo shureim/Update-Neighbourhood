@@ -118,15 +118,15 @@ class Health(models.Model):
     hospital = models.CharField(max_length = 50)
     neighborhood_contact = models.ForeignKey('Neighborhood',on_delete=models.CASCADE)
 
-#     def __str__(self):
-#         return f'{self.contact_name}'
-#
-#     def save_health(self):
-#         self.save()
-#
-#     def delete_health(self):
-#         self.delete()
-#
+    def __str__(self):
+        return f'{self.contact_name}'
+
+    def save_health(self):
+        self.save()
+
+    def delete_health(self):
+        self.delete()
+
 #     @classmethod
 #     def get_all(cls):
 #         health = cls.objects.all()
