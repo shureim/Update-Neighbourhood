@@ -22,20 +22,20 @@ class NeighborhoodTestClass(TestCase):
         self.new_neighborhood.save_neighborhood()
         self.new_neighborhood.delete_neighborhood()
 
-#     def test_update_neighborhood(self):
-#         self.new_neighborhood.save_neighborhood()
-#         self.new_neighborhood = Neighborhood.objects.get(id = 3 )
-#         self.new_neighborhood.update_neighborhood('Nairobi')
-#         self.updated_neighborhood = Neighborhood.objects.get(id = 3)
-#         self.assertEqual(self.updated_neighborhood.location,"Nairobi")
-#
-#     def test_update_neighborhood(self):
-#         self.new_neighborhood.save_neighborhood()
-#         self.new_neighborhood = Neighborhood.objects.get(id = 3 )
-#         self.new_neighborhood.update_neighborhood('2')
-#         self.updated_neighborhood = Neighborhood.objects.get(id = 3)
-#         self.assertEqual(self.updated_neighborhood.count,2)
-#
+    def test_update_neighborhood(self):
+        self.new_neighborhood.save_neighborhood()
+        self.new_neighborhood = Neighborhood.objects.get(id = 3 )
+        self.new_neighborhood.update_neighborhood('Nairobi')
+        self.updated_neighborhood = Neighborhood.objects.get(id = 3)
+        self.assertEqual(self.updated_neighborhood.location,"Nairobi")
+
+    def test_update_neighborhood(self):
+        self.new_neighborhood.save_neighborhood()
+        self.new_neighborhood = Neighborhood.objects.get(id = 3 )
+        self.new_neighborhood.update_neighborhood('2')
+        self.updated_neighborhood = Neighborhood.objects.get(id = 3)
+        self.assertEqual(self.updated_neighborhood.count,2)
+
 # class UserStatusTestClass(TestCase):
 #     #Set up method
 #     def setUp(self):
