@@ -18,11 +18,11 @@ def homepost(request):
     post = Post.get_all()
     return render(request,'homepost.html',{'post':post})
 
-# @login_required(login_url='/accounts/login/')
-# def homebusiness(request):
-#     business = Business.get_all()
-#     return render(request,'homebusiness.html',{'business':business})
-#
+@login_required(login_url='/accounts/login/')
+def homebusiness(request):
+    business = Business.get_all()
+    return render(request,'homebusiness.html',{'business':business})
+
 # @login_required(login_url='/accounts/login/')
 # def homeneighborhood(request):
 #     neighborhood = Neighborhood.get_all()
