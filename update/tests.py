@@ -36,15 +36,15 @@ class NeighborhoodTestClass(TestCase):
         self.updated_neighborhood = Neighborhood.objects.get(id = 3)
         self.assertEqual(self.updated_neighborhood.count,2)
 
-# class UserStatusTestClass(TestCase):
-#     #Set up method
-#     def setUp(self):
-#         self.new_userstatus =UserStatus(user_image="tarek.jpeg",user_email = "tarickaliabdi@gmail.com")
-#
-#     # Testing  instance
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.new_userstatus,UserStatus))
-#
+class UserStatusTestClass(TestCase):
+    #Set up method
+    def setUp(self):
+        self.new_userstatus =UserStatus(user_image="tarek.jpeg",user_email = "tarickaliabdi@gmail.com")
+
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_userstatus,UserStatus))
+
 #     #Testing Save Method
 #     def test_save_method(self):
 #         self.new_userstatus.save_userstatus()
