@@ -70,16 +70,16 @@ class Business(models.Model):
 
     def delete_business(self):
         self.delete()
-#
-#     def update_business(self,business_name):
-#         self.business_name = business_name
-#         self.save()
-#
-#     @classmethod
-#     def get_all(cls):
-#         business = cls.objects.all()
-#         return business
-#
+
+    def update_business(self,business_name):
+        self.business_name = business_name
+        self.save()
+
+    @classmethod
+    def get_all(cls):
+        business = cls.objects.all()
+        return business
+
 #     @classmethod
 #     def get_business(cls, business_id):
 #         business = cls.objects.get(id=business_id)
