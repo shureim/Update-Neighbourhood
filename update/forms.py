@@ -6,22 +6,22 @@ class PostForm(forms.ModelForm):
         model = Post
         exclude = ['writer']
 
-# class BusinessForm(forms.ModelForm):
-#     class Meta:
-#         model = Business
-#         fields = '__all__'
-#
-# class HealthForm(forms.ModelForm):
-#     class Meta:
-#         model = Health
-#         fields = '__all__'
-#
-# class ProfileForm(forms.ModelForm):
-#     class Meta:
-#         model = UserStatus
-#         exclude = ['user']
-#
-# class NeighborhoodForm(forms.ModelForm):
-#     class Meta:
-#         model = UserStatus
-#         exclude = ['user','user_image','user_email']
+class BusinessForm(forms.ModelForm):
+    class Meta:
+        model = Business
+        fields = '__all__'
+
+class HealthForm(forms.ModelForm):
+    class Meta:
+        model = Health
+        fields = '__all__'
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserStatus
+        exclude = ['user']
+
+class NeighborhoodForm(forms.ModelForm):
+    class Meta:
+        model = UserStatus
+        exclude = ['user','user_image','user_email']
