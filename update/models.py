@@ -132,13 +132,13 @@ class Health(models.Model):
         health = cls.objects.all()
         return health
 
-# class Police(models.Model):
-#     Station = models.CharField(max_length=30)
-#     contacts = models.PositiveIntegerField()
-#     neighborhood_contact = models.ForeignKey('Neighborhood',on_delete=models.CASCADE)
-#
-#
-#
+class Police(models.Model):
+    Station = models.CharField(max_length=30)
+    contacts = models.PositiveIntegerField()
+    neighborhood_contact = models.ForeignKey('Neighborhood',on_delete=models.CASCADE)
+
+
+
 #     def __str__(self):
 #         return f'{self.Station}'
 #
