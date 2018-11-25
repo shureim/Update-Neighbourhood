@@ -28,11 +28,11 @@ def homeneighborhood(request):
     neighborhood = Neighborhood.get_all()
     return render(request,'homeneighborhood.html',{'neighborhood':neighborhood,})
 
-# @login_required(login_url='/accounts/login/')
-# def homehealth(request):
-#     health = Health.get_all()
-#     return render(request,'homehealth.html',{'health':health,})
-#
+@login_required(login_url='/accounts/login/')
+def homehealth(request):
+    health = Health.get_all()
+    return render(request,'homehealth.html',{'health':health,})
+
 # @login_required(login_url='/accounts/login/')
 # def homepolice(request):
 #     police = Police.get_all()
