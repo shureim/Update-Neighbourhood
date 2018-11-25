@@ -55,15 +55,15 @@ class UserStatusTestClass(TestCase):
         self.new_userstatus.save_userstatus()
         self.new_userstatus.delete_userstatus()
 
-# class BusinessTestClass(TestCase):
-#     #Set up method
-#     def setUp(self):
-#         self.new_business =Business(business_name="shopkeeper",business_email = "tarickaliabdi@gmail.com")
-#
-#     # Testing  instance
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.new_business,Business))
-#
+class BusinessTestClass(TestCase):
+    #Set up method
+    def setUp(self):
+        self.new_business =Business(business_name="shopkeeper",business_email = "tarickaliabdi@gmail.com")
+
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_business,Business))
+
 #     #Testing Save Method
 #     def test_save_method(self):
 #         self.new_business.save_business()
