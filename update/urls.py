@@ -17,7 +17,6 @@ urlpatterns=[
     url(r'^neighborhood/(\d+)',views.neighborhood,name ='neighborhood'),
     url(r'^new/post$', views.new_post, name='new-post'),
     url(r'^new/health$', views.new_health, name='new-health'),
-
     url(r'^new/business$', views.new_business, name='new-business'),
     url(r'^search/', views.search, name='search'),
     url(r'^search-detail/(\d+)',views.search_details,name = 'search-detail'),
