@@ -139,16 +139,16 @@ class Police(models.Model):
 
 
 
-#     def __str__(self):
-#         return f'{self.Station}'
-#
-#     def save_police(self):
-#         self.save()
-#
-#     def delete_police(self):
-#         self.delete()
-#
-#     @classmethod
-#     def get_all(cls):
-#         police = cls.objects.all()
-#         return police
+    def __str__(self):
+        return f'{self.Station}'
+
+    def save_police(self):
+        self.save()
+
+    def delete_police(self):
+        self.delete()
+
+    @classmethod
+    def get_all(cls):
+        police = cls.objects.all()
+        return police
