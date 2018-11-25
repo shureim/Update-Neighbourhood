@@ -102,15 +102,15 @@ class Post(models.Model):
     def delete_post(self):
         self.delete()
 
-#     @classmethod
-#     def get_all(cls):
-#         post = cls.objects.all()
-#         return post
-#
-#     @classmethod
-#     def get_post(cls, post_id):
-#         post = cls.objects.get(id=post_id)
-#         return post
+    @classmethod
+    def get_all(cls):
+        post = cls.objects.all()
+        return post
+
+    @classmethod
+    def get_post(cls, post_id):
+        post = cls.objects.get(id=post_id)
+        return post
 #
 # class Health(models.Model):
 #     contact_name = models.CharField(max_length=30)
