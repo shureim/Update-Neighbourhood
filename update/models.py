@@ -127,11 +127,11 @@ class Health(models.Model):
     def delete_health(self):
         self.delete()
 
-#     @classmethod
-#     def get_all(cls):
-#         health = cls.objects.all()
-#         return health
-#
+    @classmethod
+    def get_all(cls):
+        health = cls.objects.all()
+        return health
+
 # class Police(models.Model):
 #     Station = models.CharField(max_length=30)
 #     contacts = models.PositiveIntegerField()
