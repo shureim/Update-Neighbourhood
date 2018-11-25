@@ -1,17 +1,17 @@
-# from django.test import TestCase
-# from .models import Neighborhood,UserStatus, Business
-#
-# # Create your tests here.
-#
-# class NeighborhoodTestClass(TestCase):
-#     #Set up method
-#     def setUp(self):
-#         self.new_neighborhood =Neighborhood(name="tarek",location="Nairobi",count = "2")
-#
-#     # Testing  instance
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.new_neighborhood,Neighborhood))
-#
+from django.test import TestCase
+from .models import Neighborhood,UserStatus, Business
+
+# Create your tests here.
+
+class NeighborhoodTestClass(TestCase):
+    #Set up method
+    def setUp(self):
+        self.new_neighborhood =Neighborhood(name="tarek",location="Nairobi",count = "2")
+
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_neighborhood,Neighborhood))
+
 #     #Testing Save Method
 #     def test_save_method(self):
 #         self.new_neighborhood.save_neighborhood()
