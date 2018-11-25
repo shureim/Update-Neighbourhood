@@ -12,16 +12,16 @@ class NeighborhoodTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.new_neighborhood,Neighborhood))
 
-#     #Testing Save Method
-#     def test_save_method(self):
-#         self.new_neighborhood.save_neighborhood()
-#         neighborhood=Neighborhood.objects.all()
-#         self.assertTrue(len(neighborhood)>0)
-#
-#     def test_delete_method(self):
-#         self.new_neighborhood.save_neighborhood()
-#         self.new_neighborhood.delete_neighborhood()
-#
+    #Testing Save Method
+    def test_save_method(self):
+        self.new_neighborhood.save_neighborhood()
+        neighborhood=Neighborhood.objects.all()
+        self.assertTrue(len(neighborhood)>0)
+
+    def test_delete_method(self):
+        self.new_neighborhood.save_neighborhood()
+        self.new_neighborhood.delete_neighborhood()
+
 #     def test_update_neighborhood(self):
 #         self.new_neighborhood.save_neighborhood()
 #         self.new_neighborhood = Neighborhood.objects.get(id = 3 )
