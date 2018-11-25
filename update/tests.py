@@ -45,16 +45,16 @@ class UserStatusTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.new_userstatus,UserStatus))
 
-#     #Testing Save Method
-#     def test_save_method(self):
-#         self.new_userstatus.save_userstatus()
-#         userstatus = UserStatus.objects.all()
-#         self.assertTrue(len(userstatus)>0)
-#
-#     def test_delete_method(self):
-#         self.new_userstatus.save_userstatus()
-#         self.new_userstatus.delete_userstatus()
-#
+    #Testing Save Method
+    def test_save_method(self):
+        self.new_userstatus.save_userstatus()
+        userstatus = UserStatus.objects.all()
+        self.assertTrue(len(userstatus)>0)
+
+    def test_delete_method(self):
+        self.new_userstatus.save_userstatus()
+        self.new_userstatus.delete_userstatus()
+
 # class BusinessTestClass(TestCase):
 #     #Set up method
 #     def setUp(self):
