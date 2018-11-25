@@ -1,11 +1,11 @@
-# from django import forms
-# from .models import UserStatus,Neighborhood,Business,Post,Health
-#
-# class PostForm(forms.ModelForm):
-#     class Meta:
-#         model = Post
-#         exclude = ['writer']
-#
+from django import forms
+from .models import UserStatus,Neighborhood,Business,Post,Health
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        exclude = ['writer']
+
 # class BusinessForm(forms.ModelForm):
 #     class Meta:
 #         model = Business
