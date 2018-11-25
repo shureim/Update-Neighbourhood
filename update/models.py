@@ -111,13 +111,13 @@ class Post(models.Model):
     def get_post(cls, post_id):
         post = cls.objects.get(id=post_id)
         return post
-#
-# class Health(models.Model):
-#     contact_name = models.CharField(max_length=30)
-#     contacts = models.PositiveIntegerField()
-#     hospital = models.CharField(max_length = 50)
-#     neighborhood_contact = models.ForeignKey('Neighborhood',on_delete=models.CASCADE)
-#
+
+class Health(models.Model):
+    contact_name = models.CharField(max_length=30)
+    contacts = models.PositiveIntegerField()
+    hospital = models.CharField(max_length = 50)
+    neighborhood_contact = models.ForeignKey('Neighborhood',on_delete=models.CASCADE)
+
 #     def __str__(self):
 #         return f'{self.contact_name}'
 #
