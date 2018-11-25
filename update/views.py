@@ -23,11 +23,11 @@ def homebusiness(request):
     business = Business.get_all()
     return render(request,'homebusiness.html',{'business':business})
 
-# @login_required(login_url='/accounts/login/')
-# def homeneighborhood(request):
-#     neighborhood = Neighborhood.get_all()
-#     return render(request,'homeneighborhood.html',{'neighborhood':neighborhood,})
-#
+@login_required(login_url='/accounts/login/')
+def homeneighborhood(request):
+    neighborhood = Neighborhood.get_all()
+    return render(request,'homeneighborhood.html',{'neighborhood':neighborhood,})
+
 # @login_required(login_url='/accounts/login/')
 # def homehealth(request):
 #     health = Health.get_all()
