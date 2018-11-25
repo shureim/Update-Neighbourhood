@@ -80,15 +80,15 @@ class Business(models.Model):
         business = cls.objects.all()
         return business
 
-#     @classmethod
-#     def get_business(cls, business_id):
-#         business = cls.objects.get(id=business_id)
-#         return business
-#
-#     @classmethod
-#     def search_by_title(cls,search_term):
-#         business = cls.objects.filter(business_name__icontains=search_term)
-#         return business
+    @classmethod
+    def get_business(cls, business_id):
+        business = cls.objects.get(id=business_id)
+        return business
+
+    @classmethod
+    def search_by_title(cls,search_term):
+        business = cls.objects.filter(business_name__icontains=search_term)
+        return business
 #
 # class Post(models.Model):
 #     post_image = models.ImageField(upload_to = 'post/', null=True)
