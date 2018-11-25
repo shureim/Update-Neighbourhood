@@ -62,14 +62,14 @@ class Business(models.Model):
     business_email = models.EmailField()
 
 
-#     def __str__(self):
-#         return self.business_name
-#
-#     def save_business(self):
-#         self.save()
-#
-#     def delete_business(self):
-#         self.delete()
+    def __str__(self):
+        return self.business_name
+
+    def save_business(self):
+        self.save()
+
+    def delete_business(self):
+        self.delete()
 #
 #     def update_business(self,business_name):
 #         self.business_name = business_name
