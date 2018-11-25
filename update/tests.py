@@ -64,16 +64,16 @@ class BusinessTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.new_business,Business))
 
-#     #Testing Save Method
-#     def test_save_method(self):
-#         self.new_business.save_business()
-#         business = Business.objects.all()
-#         self.assertTrue(len(business)>0)
-#
-#     def test_delete_method(self):
-#         self.new_business.save_business()
-#         self.new_business.delete_business()
-#
+    #Testing Save Method
+    def test_save_method(self):
+        self.new_business.save_business()
+        business = Business.objects.all()
+        self.assertTrue(len(business)>0)
+
+    def test_delete_method(self):
+        self.new_business.save_business()
+        self.new_business.delete_business()
+
 #     def test_update_business(self):
 #         self.new_business.save_business()
 #         self.new_business= Business.objects.get(id = 3 )
