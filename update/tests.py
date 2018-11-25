@@ -74,9 +74,9 @@ class BusinessTestClass(TestCase):
         self.new_business.save_business()
         self.new_business.delete_business()
 
-#     def test_update_business(self):
-#         self.new_business.save_business()
-#         self.new_business= Business.objects.get(id = 3 )
-#         self.new_business.update_business('shopkeeper')
-#         self.updated_business = Business.objects.get(id = 3)
-#         self.assertEqual(self.updated_business.business_name,"shopkeeper")
+    def test_update_business(self):
+        self.new_business.save_business()
+        self.new_business= Business.objects.get(id = 3 )
+        self.new_business.update_business('shopkeeper')
+        self.updated_business = Business.objects.get(id = 3)
+        self.assertEqual(self.updated_business.business_name,"shopkeeper")
