@@ -48,7 +48,7 @@ class UserStatusTestClass(TestCase):
     #Testing Save Method
     def test_save_method(self):
         self.new_userstatus.save_userstatus()
-        userstatus = UserStatus.objects.all()
+        userstatus = UserStatus.objects.all()https://github.com/shureim/Update-Neighbourhood
         self.assertTrue(len(userstatus)>0)
 
     def test_delete_method(self):

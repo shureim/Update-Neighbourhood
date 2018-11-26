@@ -18,7 +18,7 @@ there are no know Bugs in this web page.
 ## Technologies Used in creating the Update-neighbourhood.
 * python
 * HTML
-* Bootstarp
+* Bootstrap
 * CSS
 
 ## Support and contact details.
@@ -26,7 +26,7 @@ For more information contact +25450995069 or Email me tarickaliabdi@gmail.com
 
 
 ## Link to live website.
-Awwards-Website (https://update-neighborhood.herokuapp.com/)
+Update-Neighbourhood(https://update-neighborhood.herokuapp.com/)
 
 
 ### License.
